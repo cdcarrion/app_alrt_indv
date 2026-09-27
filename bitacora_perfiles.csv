@@ -1,0 +1,26 @@
+id,fecha_recibido,fecha_entrega,variables_deterioro,justificativo
+1700000000,2026-06-11,2026-06-13,saldo_pasivo;score,Deterioro por mora reciente en otra entidad.
+1700000001,2026-06-16,2026-06-21,operaciones_vigentes,Score bajó por nueva consulta de crédito.
+1700000002,2026-05-05,2026-05-06,dias_mora;score,Cierre de productos vigentes con el banco.
+1700000003,2026-05-08,2026-05-13,operaciones_vigentes,Deterioro por mora reciente en otra entidad.
+1700000004,2026-07-13,2026-07-18,score,Score bajó por nueva consulta de crédito.
+1700000005,2026-06-07,2026-06-11,dias_mora,Reducción de saldo disponible en cuenta del pasivo.
+1700000006,2026-07-11,2026-07-13,dias_mora,Score bajó por nueva consulta de crédito.
+1700000007,2026-06-17,2026-06-18,dias_mora;saldo_pasivo,Cierre de productos vigentes con el banco.
+1700000008,2026-07-27,2026-08-01,dias_mora;saldo_pasivo,Cierre de productos vigentes con el banco.
+1700000009,2026-06-16,2026-06-19,saldo_pasivo,Score bajó por nueva consulta de crédito.
+1700000010,2026-05-11,2026-05-16,dias_mora;tarjetas_vigentes,Cierre de productos vigentes con el banco.
+1700000011,2026-06-06,2026-06-11,score,Cierre de productos vigentes con el banco.
+1700000012,2026-05-22,2026-05-25,operaciones_vigentes,Cierre de productos vigentes con el banco.
+1700000013,2026-05-06,2026-05-07,dias_mora;tarjetas_vigentes,Reducción de saldo disponible en cuenta del pasivo.
+1700000014,2026-07-16,2026-07-20,saldo_pasivo;score,Reducción de saldo disponible en cuenta del pasivo.
+1700000015,2026-06-30,2026-07-01,saldo_pasivo,Reducción de saldo disponible en cuenta del pasivo.
+1700000016,2026-07-22,2026-07-27,dias_mora;score,Reducción de saldo disponible en cuenta del pasivo.
+1700000017,2026-05-03,2026-05-07,score,Deterioro por mora reciente en otra entidad.
+1700000018,2026-05-28,2026-05-31,saldo_pasivo,Cierre de productos vigentes con el banco.
+1700000019,2026-06-20,2026-06-24,score,Cierre de productos vigentes con el banco.
+1700000020,2026-07-10,2026-07-13,tarjetas_vigentes,Reducción de saldo disponible en cuenta del pasivo.
+1700000021,2026-07-30,2026-08-03,dias_mora;saldo_pasivo,Score bajó por nueva consulta de crédito.
+1700000022,2026-05-20,2026-05-21,score,Score bajó por nueva consulta de crédito.
+1700000023,2026-05-02,2026-05-06,score,Reducción de saldo disponible en cuenta del pasivo.
+1700000024,2026-07-18,2026-07-23,operaciones_vigentes;saldo_pasivo,Deterioro por mora reciente en otra entidad.
