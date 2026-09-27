@@ -1,0 +1,54 @@
+Necesito una aplicación en Python con Streamlit para el monitoreo de perfil individual de clientes.
+
+CONTEXTO DE DATOS:
+- Tengo 2 modelos de riesgo: PES y Personas. Cada uno tiene sus propias
+  variables (unas 20 cada uno), con histórico mensual.
+- Para un cliente individual, puedo exportar un archivo (CSV o Excel) con
+  su histórico: una fila por corte/fecha (columna "fecha"), una columna por
+  variable. Las variables clave que quiero resaltar son: score, dias_mora,
+  saldo_pasivo, tarjetas_vigentes, operaciones_vigentes, vive_con_familiares.
+  El archivo puede traer más columnas además de esas (otras variables del
+  modelo) que no están definidas de antemano.
+- Además tengo una bitácora que se llena a mano en Excel, con las columnas:
+  id, fecha_recibido (fecha de recepción del mail), fecha_entrega (fecha de
+  entrega del mail), variables_deterioro (nombres de variables separados
+  por ";" que explican el deterioro de ese caso), justificativo (texto).
+
+NECESITO UNA APP CON 2 PESTAÑAS:
+
+1. "Análisis individual": dos bloques para ARRASTRAR un archivo, uno para
+   la base PES y otro para la base Personas (CSV o Excel). Al subir uno:
+   - Mostrar la tabla completa del histórico que se subió.
+   - Graficar la tendencia de score y días mora en el tiempo (si esas
+     columnas existen en el archivo).
+   - Mostrar un descriptivo del corte MÁS RECIENTE (última fecha): para
+     las 6 variables clave, aplicar una regla simple de alerta con
+     umbrales configurables (ejemplo: score por debajo de un umbral =
+     alerta; días mora por encima de un umbral = alerta; etc.) y marcar
+     cada una con ✅ o ⚠️. El resto de columnas del archivo que NO sean esas
+     6 variables clave se deben mostrar igual, como "otras variables",
+     sin regla de alerta automática (porque no se conoce su umbral).
+   - Si se suben los 2 archivos a la vez, avisar que solo se puede
+     analizar uno a la vez.
+
+2. "Bitácora": un bloque para ARRASTRAR la bitácora (CSV o Excel, no un
+   formulario dentro de la app — la bitácora se sigue llenando a mano
+   fuera de la app). Al subirla:
+   - Mostrar cuántos casos hay y el tiempo de respuesta promedio (días
+     entre fecha_recibido y fecha_entrega).
+   - Graficar qué variables aparecen más seguido en la columna
+     variables_deterioro (separando el texto por ";").
+   - Si no se sube nada, mostrar datos de ejemplo para que no quede vacía.
+
+REQUISITOS TÉCNICOS:
+- Streamlit para la interfaz, pandas para leer y procesar los archivos.
+- Separar la lógica de negocio (lectura de archivos, regla de alerta,
+  frecuencia de variables, tiempo de respuesta) en un archivo aparte de la
+  interfaz, para poder probarla sin Streamlit.
+- Un script separado que genere datos de ejemplo ficticios: el histórico
+  de un cliente PES, el histórico de un cliente Personas, y una bitácora
+  con varios casos.
+- Fondo blanco fijo (que no cambie a oscuro con el tema del sistema) — usar
+  un archivo .streamlit/config.toml.
+- Código simple y comentado, sin librerías adicionales a las mencionadas
+  (streamlit, pandas, openpyxl para leer Excel).
